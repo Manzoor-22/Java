@@ -1,7 +1,15 @@
-package Syllabus;
+import java.util.*;
 
-public class enumerator {
+public class Enumerator{
     public static void main(String args[]){
-        System.out.println("Hello!");
+        Vector<Integer> vct = new Vector<>();
+        vct.add(2);
+        vct.add(3);
+        vct.add(4);
+        vct.add(5);
+        Enumeration<Integer> en = Collections.enumeration(vct);
+        while(en.hasMoreElements()){
+            System.out.println(en.nextElement());
+        }
     }
 }

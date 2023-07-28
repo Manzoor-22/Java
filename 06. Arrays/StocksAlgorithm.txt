@@ -1,0 +1,27 @@
+STEPS:
+1. CREATE BUYPRICE, PROFIT
+2. IF BUYPRICE < PRICES[i]
+        int CURR_PROFIT = BUYPRICE - PRICES[i]
+        PROFIT = Math.max(CURR_PROFIT, PROFIT)
+3. ELSE
+        BUYPRICE = PRICES[i]
+
+PRICES = 2 3 4 1 8 2 3
+
+BUYPRICE = 2, PROFIT = 0
+
+i = 1
+2 < 3(YES)
+DO: CURR_PROFIT = 3 - 2 = 1
+    PROFIT(1,0) = 1
+
+i = 2
+2 < 4(YES)
+DO: PROFIT = 4 - 2 = 2
+    PROFIT(1, 2) = 2
+
+i = 3
+2 < 1
+DO: BUYPRICE = 1
+
+

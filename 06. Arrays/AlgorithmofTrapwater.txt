@@ -1,0 +1,8 @@
+STEPS:
+1. CREATE LeftMax Array
+2. CREATE RightMax Array
+3. CREATE CounterofTrapWater
+3. CREATE TrapWater Array
+    USE FORMULA 
+        TrapWater[i] = Math.min(RightMax(i), LeftMax(i)) - Array[i]
+        Add in CounterofTrapWater
