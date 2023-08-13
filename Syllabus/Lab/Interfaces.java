@@ -1,3 +1,6 @@
+import A;
+import B;
+
 interface A
 {
     void meth1();
