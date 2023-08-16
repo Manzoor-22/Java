@@ -1,31 +1,29 @@
-import A;
-import B;
+package Syllabus.External_Lab;
 
-interface A
-{
+interface A{
     void meth1();
     void meth2();
 }
-interface B extends A
-{
+
+interface B extends A{
     void meth3();
 }
-class Myclass implements B
-{
+
+class MyClass implements B{
     public void meth1(){
         System.out.println("Implemented meth1()");
     }
     public void meth2(){
-        System.out.println("Implemented meth2()");
+        System.out.println("Implemented meth3()");
     }
     public void meth3(){
         System.out.println("Implemented meth3()");
     }
 }
-class Interfaces
-{
+
+class Interfaces {
     public static void main(String args[]){
-        Myclass obj = new Myclass();
+        MyClass obj = new MyClass();
         obj.meth1();
         obj.meth2();
         obj.meth3();
