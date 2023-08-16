@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Stocks {
     public static void main(String args[]){
-        int Prices[] = {2, 19, 20, 7};
+        int Prices[] = {7,6,4,3,1};
         System.out.println(MaxProfit(Prices));
     }
 
