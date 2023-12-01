@@ -1,3 +1,18 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "Syllabus",
+        "Leetcode",
+        "10. Arrays (Part II)",
+        "09. Patterns (Part II)",
+        "08. 2D Arrays",
+        "07. Basic Sorting",
+        "06. Arrays",
+        "05.Loops",
+        "04.Conditional Statements",
+        "03. Functions",
+        "02. Patterns",
+        "01. Variables and Data Structures",
+        "11. Bitwise Operators"
+    ]
 }
