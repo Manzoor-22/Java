@@ -3,6 +3,7 @@
     "java.project.sourcePaths": [
         "Syllabus",
         "Leetcode",
+        "11. Bitwise Operators",
         "08. 2D Arrays",
         "07. Basic Sorting",
         "06. Arrays",
@@ -11,6 +12,6 @@
         "03. Functions",
         "02. Patterns",
         "01. Variables and Data Structures",
-        "11. Bitwise Operators"
+        "12. Recursion"
     ]
 }
