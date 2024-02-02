@@ -5,6 +5,7 @@
         "Leetcode",
         "12. Recursion",
         "11. Bitwise Operators",
+        "10. Strings",
         "08. 2D Arrays",
         "07. Basic Sorting",
         "06. Arrays",
@@ -13,6 +14,6 @@
         "03. Functions",
         "02. Patterns",
         "01. Variables and Data Structures",
-        "10. Strings"
+        "13. Divide And Conquer"
     ]
 }
