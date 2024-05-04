@@ -12,5 +12,7 @@ public class CountLowerCase {
                 count++;
         }
         System.out.println("Number of lowercase vowels: " + count);
+
+        sc.close();
     }
 }
