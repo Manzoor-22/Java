@@ -3,6 +3,8 @@
     "java.project.sourcePaths": [
         "Syllabus",
         "Leetcode",
+        "14. Backtracking",
+        "13. Divide And Conquer",
         "12. Recursion",
         "11. Bitwise Operators",
         "10. Strings",
@@ -14,6 +16,6 @@
         "03. Functions",
         "02. Patterns",
         "01. Variables and Data Structures",
-        "13. Divide And Conquer"
+        ""
     ]
 }
