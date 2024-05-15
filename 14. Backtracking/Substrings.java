@@ -1,6 +1,6 @@
 public class Substrings {
     public static void backtrack(String str, String ans, int i){
-        if(str.length() == i){
+        if(i == str.length()){
             System.out.println(ans);
             return;
         }
