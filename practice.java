@@ -1,12 +1,33 @@
 public class practice {
     public static void main(String[] args) {
-        int x= 121;
-        int ans = 0, temp = x;
-        while(temp > 0){
-            int remainder = temp % 10;
-            ans = ans * 10 + remainder;
-            temp /= 10;
+        System.out.println(myAtoi("-91283472332"));
+    }
+
+    public static int myAtoi(String s) {
+        long ans = 0;
+        s = s.strip();
+        StringBuilder temp = new StringBuilder(s);
+        if(temp.charAt(0) == '-' || temp.charAt(0) == '+')
+            temp.deleteCharAt(0);
+        
+        for(Character c: temp.toString().toCharArray()){
+            if(!Character.isDigit(c)){
+                return (int)ans;
+            }
+            ans = (ans * 10) + Character.getNumericValue(c);
+            
+            if(ans < Integer.MIN_VALUE && s.charAt(0) == '-'){
+                return Integer.MIN_VALUE;
+            }
+            if(ans > Integer.MAX_VALUE){
+                return Integer.MAX_VALUE;
+            }
         }
-        System.out.println(ans);
+            
+        
+        if(s.charAt(0) == '-')
+            return (int)-ans;
+        
+        return (int)ans;
     }
 }
