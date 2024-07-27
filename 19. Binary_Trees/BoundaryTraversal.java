@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BoundaryTraversal {
     static class Node {
         int val;
@@ -41,12 +44,24 @@ public class BoundaryTraversal {
         tree.right.right.left.right = new Node(11);
 
 
-        if(tree != null){
-            System.out.print(tree.val + " ");
-            if(tree.left != null)
-                preOrder(tree.left);
-            if(tree.right != null)
-            postOrder(tree.right);
+        // if(tree != null){
+        //     System.out.print(tree.val + " ");
+        //     if(tree.left != null)
+        //         preOrder(tree.left);
+        //     if(tree.right != null)
+        //     postOrder(tree.right);
+        // }
+        Queue<Integer> ll = new LinkedList<>();
+        bfs(tree, ll);
+        System.out.println(ll.toString());
+    }
+
+    public static void bfs(Node root, Queue<Integer> ll){
+        if(root == null){
+            return;
         }
+        ll.add(root.val);
+        bfs(root.left, ll);
+        bfs(root.right, ll);
     }
 }
