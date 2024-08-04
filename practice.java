@@ -1,33 +1,46 @@
-public class practice {
-    public static void main(String[] args) {
-        System.out.println(myAtoi("-91283472332"));
-    }
+import java.util.ArrayList;
+import java.util.HashMap;
 
-    public static int myAtoi(String s) {
-        long ans = 0;
-        s = s.strip();
-        StringBuilder temp = new StringBuilder(s);
-        if(temp.charAt(0) == '-' || temp.charAt(0) == '+')
-            temp.deleteCharAt(0);
-        
-        for(Character c: temp.toString().toCharArray()){
-            if(!Character.isDigit(c)){
-                return (int)ans;
-            }
-            ans = (ans * 10) + Character.getNumericValue(c);
-            
-            if(ans < Integer.MIN_VALUE && s.charAt(0) == '-'){
-                return Integer.MIN_VALUE;
-            }
-            if(ans > Integer.MAX_VALUE){
-                return Integer.MAX_VALUE;
+public class practice {
+    static int[][] mat;
+    static HashMap<Integer, ArrayList> hm = new HashMap<>();
+    public static void main(String[] args) {
+        int[][] grid = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
+        mat = new int[grid.length][grid[0].length];
+
+        for(int i = 0; i < grid.length; i++){
+            for(int j = 0; j < grid[0].length; j++){
+                ArrayList<Integer> al = new ArrayList<>();
+                al.add(i);
+                al.add(j);
+                hm.put(grid[i][j], al);
+                mat[i][j] = grid[i][j];
             }
         }
-            
-        
-        if(s.charAt(0) == '-')
-            return (int)-ans;
-        
-        return (int)ans;
+
+        System.out.println(hm);
+        adjacentSum(6);
+    }
+
+    public static void adjacentSum(int value) {
+        ArrayList<Integer> location = hm.get(value);
+        int row = location.get(0);
+        int col = location.get(1);
+        int ans = 0;
+
+        if(row-1 >= 0){
+            ans += mat[row-1][col];
+        }
+        if(row+1 < mat.length){
+            ans += mat[row+1][col];
+        }
+        if(col-1 >= 0){
+            ans += mat[row][col-1];
+        }
+        if(col+1 < mat[0].length){
+            ans += mat[row][col+1];
+        }
+
+        System.out.println(ans);
     }
 }
