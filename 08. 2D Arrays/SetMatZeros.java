@@ -6,6 +6,13 @@ public class SetMatZeros {
         int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
 
         setZeroes(matrix);
+
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
     public static void setZeroes(int[][] matrix) {
         Set<Integer> rs = new HashSet<>();
@@ -23,5 +30,13 @@ public class SetMatZeros {
 
         System.out.println(rs);
         System.out.println(cs);
+
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if(rs.contains(i) || cs.contains(j)){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
     }
 }
