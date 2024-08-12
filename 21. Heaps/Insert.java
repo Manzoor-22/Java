@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class DeleteFromHeap {
+public class Insert {
     static class Heap{
         ArrayList<Integer> al = new ArrayList<>();
 
@@ -35,9 +35,10 @@ public class DeleteFromHeap {
         Heap h = new Heap();
         Random r = new Random();
 
-        for(int i = 0; i < 15; i++){
+        for(int i = 0; i < 5; i++){
             h.add(r.nextInt(100));
         }
+        h.add(0);
         
 
         h.print();
