@@ -32,20 +32,22 @@ public class BFS {
         graph[1].add(new Edge(1, 0, 5));
         graph[1].add(new Edge(1, 3, 5));
         
-        graph[1].add(new Edge(2, 0, 5));
-        graph[1].add(new Edge(2, 4, 5));
+        graph[2].add(new Edge(2, 0, 5));
+        graph[2].add(new Edge(2, 4, 5));
         
-        graph[1].add(new Edge(3, 4, 5));
-        graph[1].add(new Edge(3, 5, 5));
-        graph[1].add(new Edge(3, 1, 5));
+        graph[3].add(new Edge(3, 4, 5));
+        graph[3].add(new Edge(3, 5, 5));
+        graph[3].add(new Edge(3, 1, 5));
         
-        graph[1].add(new Edge(4, 2, 5));
-        graph[1].add(new Edge(4, 3, 5));
-        graph[1].add(new Edge(4, 5, 5));
+        graph[4].add(new Edge(4, 2, 5));
+        graph[4].add(new Edge(4, 3, 5));
+        graph[4].add(new Edge(4, 5, 5));
         
-        graph[1].add(new Edge(5, 3, 5));
-        graph[1].add(new Edge(5, 4, 5));
-        graph[1].add(new Edge(5, 6, 5));
+        graph[5].add(new Edge(5, 3, 5));
+        graph[5].add(new Edge(5, 4, 5));
+        graph[5].add(new Edge(5, 6, 5));
+        
+        graph[6].add(new Edge(6, 5, 5));
     }
 
     public static void bfs(ArrayList<Edge>[] graph, int start){
@@ -72,6 +74,6 @@ public class BFS {
         graph = new ArrayList[V];
         createGraph(V);
 
-        bfs(graph, 2);
+        bfs(graph, 6);
     }
 }
