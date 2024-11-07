@@ -13,6 +13,7 @@ public class DFS {
         }
     }
     
+    @SuppressWarnings("unchecked")
     public static ArrayList<Edge>[] graph = new ArrayList[7];
     
     public static void createGraph(){

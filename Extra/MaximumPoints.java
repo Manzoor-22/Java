@@ -1,3 +1,4 @@
+package Extra;
 public class MaximumPoints {
     public static void main(String[] args) {
         int points[][] = {

@@ -1,3 +1,4 @@
+package Extra;
 import java.util.HashMap;
 
 public class CountGoodNodes{

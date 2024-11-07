@@ -1,3 +1,4 @@
+package Extra;
 public class BinarySystem {
     public static void main(String[] args) {
         String str = "111";
